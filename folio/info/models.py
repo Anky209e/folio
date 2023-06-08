@@ -1,7 +1,9 @@
 from django.db import models
 
-
 class Skill(models.Model):
+    """
+    Model for skills with name,info and icon.
+    """
     skill_name = models.CharField(blank=False,max_length=50)
     about = models.TextField(blank=True)
     icon = models.FileField(upload_to='skill_icons/',null=True,blank=True)
@@ -9,7 +11,12 @@ class Skill(models.Model):
     def __str__(self):
         return str(self.skill_name)
 
+
 class AboutMe(models.Model):
+    """
+    Model for All user Info and Resume. \n
+    (Can be used in future for multiple users)
+    """
     name = models.CharField(blank=False,max_length=50)
     profile_image = models.FileField(upload_to='profile_images/',null=True,blank=True)
     who_am_i = models.TextField(blank=True,null=True)

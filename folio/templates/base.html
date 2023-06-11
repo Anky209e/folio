@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -14,14 +18,17 @@
         --back:#393E46;
         --high:#00ADB5;
         --text:#EEEEEE;
+
+        --heading:'Electrolize', sans-serif;
+        --content:'Ubuntu', sans-serif;
     }
 
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        /* font-family: Arial, Helvetica, sans-serif; */
         /* background-image: linear-gradient(to bottom right, #3CBADB,#01CDD7,#37DEC4,#77ECA7,#B7F588); */
         background-color:var(--back);
         color: var(--text);
-        
+        font-family: var(--content)
     }
 
     .navbar {
@@ -32,7 +39,9 @@
         border: 0px 1px 1px 1px  solid var(--high);
         border-radius: 5px;
         margin-left: 25%;
-        
+        display: flex;
+        justify-content: center;
+        font-family: var(--heading);
         
         
     }
@@ -72,10 +81,11 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: var(--fore);
+        background-color: var(--back);
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 8px 16px 0px var(--fore);
         z-index: 1;
+        
     }
 
     .dropdown-content a {
@@ -85,6 +95,7 @@
         text-decoration: none;
         display: block;
         text-align: left;
+        
     }
 
     .dropdown-content a:hover {

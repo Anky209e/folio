@@ -9,22 +9,42 @@
 </head>
 
 <style>
+    :root{
+        --fore:#222831;
+        --back:#393E46;
+        --high:#00ADB5;
+        --text:#EEEEEE;
+    }
+
     body {
         font-family: Arial, Helvetica, sans-serif;
+        /* background-image: linear-gradient(to bottom right, #3CBADB,#01CDD7,#37DEC4,#77ECA7,#B7F588); */
+        background-color:var(--back);
+        color: var(--text);
+        
     }
 
     .navbar {
         overflow: hidden;
-        background-color: #333;
+        background-color: var(--fore);
+        text-align: center;
+        width: 50%;
+        border: 0px 1px 1px 1px  solid var(--high);
+        border-radius: 5px;
+        margin-left: 25%;
+        
+        
+        
     }
 
     .navbar a {
         float: left;
         font-size: 16px;
-        color: white;
+        color: var(--text);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        
     }
 
     .dropdown {
@@ -41,17 +61,18 @@
         background-color: inherit;
         font-family: inherit;
         margin: 0;
+        
     }
 
     .navbar a:hover,
     .dropdown:hover .dropbtn {
-        background-color: red;
+        background-color: var(--high);
     }
 
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: var(--fore);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
@@ -59,7 +80,7 @@
 
     .dropdown-content a {
         float: none;
-        color: black;
+        color: var(--text);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -67,7 +88,7 @@
     }
 
     .dropdown-content a:hover {
-        background-color: #ddd;
+        background-color: var(--high);
     }
 
     .dropdown:hover .dropdown-content {
@@ -76,7 +97,7 @@
 </style>
 
 <body>
-
+                                            
     <div class="navbar">
         <a href="/">Home</a>
         <a href="#news">About</a>
@@ -93,7 +114,7 @@
 
         <a href="#news">Experience</a>
         <a href="#news">Contact</a>
-        <a href="/media/resume/resume_main.pdf">Resume</a>
+        <a href="/media/{{ about.resume }}">Resume</a>
     </div>
 
     {% block content %}{% endblock %}

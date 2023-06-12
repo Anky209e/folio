@@ -23,12 +23,14 @@
         --content:'Ubuntu', sans-serif;
     }
 
-    body {
+    html,body {
         /* font-family: Arial, Helvetica, sans-serif; */
         /* background-image: linear-gradient(to bottom right, #3CBADB,#01CDD7,#37DEC4,#77ECA7,#B7F588); */
         background-color:var(--back);
         color: var(--text);
-        font-family: var(--content)
+        font-family: var(--content);
+        height: 100%;
+        
     }
 
     .navbar {
@@ -42,8 +44,7 @@
         display: flex;
         justify-content: center;
         font-family: var(--heading);
-        
-        
+
     }
 
     .navbar a {
@@ -105,13 +106,24 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+
+    .content-main {
+        /* background-color: var(--fore); */
+        border: 5px solid var(--fore);
+        background-color: var(--fore);
+        border-radius: 10px;
+        margin: 1%;
+        height: 90%;
+        text-align: center;
+        /* overflow-y: scroll; */
+    }
 </style>
 
 <body>
                                             
     <div class="navbar">
         <a href="/">Home</a>
-        <a href="#news">About</a>
+        <a href="/info/about">About</a>
         
         <div class="dropdown">
             <button class="dropbtn">Projects
@@ -124,11 +136,14 @@
         </div>
 
         <a href="#news">Experience</a>
-        <a href="#news">Contact</a>
+        <a href="/info/contact">Contact</a>
         <a href="/media/{{ about.resume }}">Resume</a>
     </div>
 
-    {% block content %}{% endblock %}
+    <div class="content-main">
+        {% block content %}{% endblock %}
+    </div>
+    
 
 </body>
 

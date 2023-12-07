@@ -109,36 +109,29 @@
 
     .content-main {
         /* background-color: var(--fore); */
+        display: flex;
         border: 5px solid var(--fore);
         background-color: var(--fore);
         border-radius: 10px;
-        margin: 1%;
-        height: 90%;
-        text-align: center;
+        /* margin: 1%; */
+        /* height: 100%; */
+        flex-direction: row;
+        /* text-align: center; */
         /* overflow-y: scroll; */
+    }
+
+
+    .content-main > a {
+        text-align: center;
+        background-color: rgb(250, 250, 164);
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        text-decoration: none;
     }
 </style>
 
 <body>
-                                            
-    <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/info/about">About</a>
-        
-        <div class="dropdown">
-            <button class="dropbtn">Projects
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-            </div>
-        </div>
-
-        <a href="#news">Experience</a>
-        <a href="/info/contact">Contact</a>
-        <a href="/media/{{ about.resume }}">Resume</a>
-    </div>
 
     <div class="content-main">
         {% block content %}{% endblock %}

@@ -8,7 +8,10 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Sometype+Mono:wght@500&family=Ysabeau+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Sometype+Mono:wght@500&family=Tektur&family=Ysabeau+SC&display=swap" rel="stylesheet">
+
 </head>
 
 <!-- font-family: 'Handjet', sans-serif;
@@ -31,7 +34,7 @@ font-family: 'Ysabeau SC', sans-serif; -->
         --red:#FF5555;
         --yellow:#F1FA8C;
 
-        --heading:'Sometype Mono', sans-serif;
+        --heading:'Ysabeau SC', sans-serif;
         --content:'Ubuntu', sans-serif;
     }
 
@@ -83,8 +86,7 @@ font-family: 'Ysabeau SC', sans-serif; -->
         padding: 14px 16px;
         background-color: inherit;
         font-family: inherit;
-        margin: 0;
-        
+        margin: 0;  
     }
 
     .navbar a:hover,
@@ -98,8 +100,7 @@ font-family: 'Ysabeau SC', sans-serif; -->
         background-color: var(--back);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px var(--fore);
-        z-index: 1;
-        
+        z-index: 1;   
     }
 
     .dropdown-content a {
@@ -108,8 +109,7 @@ font-family: 'Ysabeau SC', sans-serif; -->
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: left;
-        
+        text-align: left;  
     }
 
     .dropdown-content a:hover {
@@ -120,23 +120,19 @@ font-family: 'Ysabeau SC', sans-serif; -->
         display: block;
     }
 
-
     .main-container  {
         display: grid;
         grid-template-columns: 70% auto auto;
         grid-template-rows: auto auto auto;
-        /* grid-gap: 1%; */
         row-gap: 1%;
         column-gap: 0.5%;
         min-height: 98%;
         text-align: center;
-        
-
     }
     
     .linkbox {
-        /* background-color: var(--cyan); */
-        background: linear-gradient(200deg, rgb(133, 229, 251) 20%, rgb(255, 255, 255) 50%,rgb(133, 229, 251) 100%);
+        /* background: linear-gradient(200deg, var(--cyan) 20%, var(--fore) 50%,var(--cyan) 100%); */
+        background: linear-gradient(200deg, var(--red) 1%, var(--orange) 50%,var(--red) 100%);
         width: 100%;
         height: 100%;
         line-height: 200px;
@@ -146,11 +142,10 @@ font-family: 'Ysabeau SC', sans-serif; -->
         position: relative;
         border-radius: 5px;
         text-decoration: dashed;   
-        /* font-family: 'Handjet', sans-serif;*/
-        /* font-family: 'Sometype Mono', monospace; */
-        font-family: 'Ysabeau SC', sans-serif;
+        font-family: 'Tektur', sans-serif;
         color: var(--text);
-        
+        transition-property: background;
+        transition-delay: 2s;  
     }
     
     .upper-boxes {
@@ -168,18 +163,18 @@ font-family: 'Ysabeau SC', sans-serif; -->
         width: 100%;
         min-height: 100%;
         background-color: var(--line);
+        /* background: linear-gradient(180deg, rgba(68,71,90,1) 30%, rgba(40,42,54,1) 90%); */
         grid-row: 1 / span 3;
         text-align: center;
         color: var(--text);
         border-radius: 5px;
         color: var(--fore);
-        
+        font-family: var(--heading);
     }
 
     .linkbox:hover {
-        background: linear-gradient(90deg, rgb(133, 229, 251) 20%, rgb(255, 255, 255) 50%,rgb(133, 229, 251) 100%);;
-        /* background-color: var(--red); */
-        color: var(--red);
+        background: linear-gradient(200deg, var(--cyan) 20%, var(--fore) 50%,var(--cyan) 100%);
+        color: var(--line);
         
     }
 </style>

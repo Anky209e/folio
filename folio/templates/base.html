@@ -17,12 +17,21 @@ font-family: 'Ysabeau SC', sans-serif; -->
 
 <style>
     :root{
-        --fore:#B6EADA;
-        --back:#001C30;
+        --fore:#F8F8F2;
+        --back:#282A36;
         --high:#00ADB5;
         --text:#001C30;
+        --line:#44475A;
+        --comment:#6272A4;
+        --cyan:#8BE9FD;
+        --green:#50FA7B;
+        --orange:#FFB86C;
+        --pink:#FF79C6;
+        --purple:#BD93F9;
+        --red:#FF5555;
+        --yellow:#F1FA8C;
 
-        --heading:'Electrolize', sans-serif;
+        --heading:'Sometype Mono', sans-serif;
         --content:'Ubuntu', sans-serif;
     }
 
@@ -126,7 +135,7 @@ font-family: 'Ysabeau SC', sans-serif; -->
     }
     
     .linkbox {
-        background-color: #64CCC5;
+        background-color: var(--cyan);
         width: 100%;
         height: 100%;
         line-height: 200px;
@@ -134,12 +143,13 @@ font-family: 'Ysabeau SC', sans-serif; -->
         text-align: center;
         text-align: center;
         position: relative;
-        border-radius: 10px;
+        border-radius: 5px;
         text-decoration: dashed;   
         /* font-family: 'Handjet', sans-serif;*/
         /* font-family: 'Sometype Mono', monospace; */
         font-family: 'Ysabeau SC', sans-serif;
         color: var(--text);
+        
     }
     
     .upper-boxes {
@@ -150,23 +160,24 @@ font-family: 'Ysabeau SC', sans-serif; -->
     .box-links {
         text-decoration: dotted;
         font-size:x-large;
-        font-weight: 800;
+        font-weight: 650;
     }
 
     .info-box {
         width: 100%;
         min-height: 100%;
-        background-color: var(--fore);
+        background-color: var(--line);
         grid-row: 1 / span 3;
         text-align: center;
         color: var(--text);
-        border-radius: 10px;
+        border-radius: 5px;
+        color: var(--fore);
         
     }
 
     .linkbox:hover {
-        background-color: #176B87;
-        color: var(--fore);
+        background-color: var(--yellow);
+        color: var(--line);
         
     }
 </style>

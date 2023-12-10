@@ -9,7 +9,9 @@
 <h1>{{about.name}}</h1>
 <h1>{{about.who_am_i}}</h1>
 <h1>{{about.what_can_i_do}}</h1>
-<h1>{{about.skills}}</h1>
+{% for skill in skills %}
+    <p>{{skill.skill_name}}</p>
+{% endfor %}
 <h1>{{about.hobbies}}</h1>
 
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import AboutMe
+from .models import AboutMe,Skill
 
 def home(request):
     about = AboutMe.objects.all().first()
@@ -12,8 +12,11 @@ def home(request):
 
 def about(request):
     about = AboutMe.objects.all().first()
+    skill = Skill.objects.all()
+    print(skill)
     context = {
-        "about":about
+        "about":about,
+        "skills":skill
     }
 
     return render(request,'about.html',context)

@@ -170,6 +170,9 @@ font-family: 'Ysabeau SC', sans-serif; -->
         border-radius: 5px;
         color: var(--fore);
         font-family: var(--heading);
+        font-size: x-small;
+        overflow-y: scroll;
+        /* padding: 1%; */
     }
 
     .linkbox:hover {
@@ -177,12 +180,35 @@ font-family: 'Ysabeau SC', sans-serif; -->
         color: var(--line);
         
     }
+    ::-webkit-scrollbar {
+        width: 1px;
+    }
 </style>
 
 <body>
+    <div class="main-container">
 
+        <div class="info-box">
+            {% block content %}
+            {% endblock %}
+        </div>
 
-    {% block content %}{% endblock %}
+        
+       <a href="" class="box-links"><div class="linkbox upper-boxes">Experience</div></a>
+       <a href="" class="box-links"><div class="linkbox upper-boxes">Projects</div></a>
+       <a href="/info/about" class="box-links"><div class="linkbox lower-boxes">About Me</div></a>
+       <a href="https://github.com/anky209e" class="box-links"><div class="linkbox lower-boxes">GitHub</div></a>
+       <a href="/info/contact" class="box-links"><div class="linkbox lower-boxes">Contact</div></a>
+       <a href="/media/{{about.resume}}" class="box-links"><div class="linkbox lower-boxes">Resume</div></a>
+        <!-- <div class="linkbox"><a href=""  class="box-links">Projects</a></div>
+        <div class="linkbox"><a href=""  class="box-links">About Me</a></div>
+        <div class="linkbox"><a href=""  class="box-links">Contact</a></div> -->
+            
+        
+
+    </div>
+
+    
     
 
 </body>
